@@ -22,7 +22,7 @@
                 <form method="POST" class="border-4 border-dark" action="Belanja-online.php">
                     <!-- Customer -->
                     <div class="mb-3 d-lg-flex">
-                        <label for="exampleFormControlInput1" class="form-label me-2 align-self-center">Customer</label>
+                        <label for="exampleFormControlInput1" class="form-label me-4 align-self-center">Customer</label>
                         <input type="text" class="form-control" name="customer" placeholder="Nama" value="" />
                     </div>
                     <!-- End Customer -->
@@ -41,7 +41,7 @@
 
                     <!-- Jumlah -->
                     <div class="mb-3 d-lg-flex">
-                        <label class="form-label align-self-center me-2">Jumlah</label>
+                        <label class="form-label align-self-center me-5">Jumlah</label>
                         <input type="text" class="form-control w-50" placeholder="Jumlah" name="jml_beli" value="" />
                     </div>
                     <!-- End Jumlah -->
