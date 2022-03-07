@@ -38,17 +38,19 @@
                         <label class="form-check-label">Mesin Cuci</label>
                     </div>
                     <!-- End Produk -->
+
                     <!-- Jumlah -->
                     <div class="mb-3 d-lg-flex">
                         <label class="form-label align-self-center me-2">Jumlah</label>
                         <input type="text" class="form-control w-50" placeholder="Jumlah" name="jml_beli" value="" />
                     </div>
                     <!-- End Jumlah -->
-                    <!-- Button -->
 
+                    <!-- Button -->
                     <div class="mb-3">
                         <button type="submit" class="btn btn-primary" name="proses">Submit</button>
                     </div>
+
                     <?php
                     $proses = $_POST["proses"];
                     $namaPelanggan = $_POST["customer"];
