@@ -17,7 +17,7 @@
                 <h1 class="display-5">Belanja Online</h1>
             </div>
         </div>
-        <div class="row justify-content-between">
+        <div class="row justify-content-lg-between">
             <div class="col-lg-4 mb-3 order-lg-1 order-2">
                 <form method="POST" class="border-4 border-dark" action="Belanja-online.php">
                     <!-- Customer -->
