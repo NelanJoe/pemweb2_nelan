@@ -61,7 +61,7 @@
                     </div>
                 </div>
                 <div class="row justify-content-center mb-4">
-                    <div class="col-8 p-2 rounded-3 shadow-md border border-2 border-primary">
+                    <div class="col-8 p-2 rounded-3 shadow-lg border border-2 border-primary">
                         <?php
                         $proses = $_GET['proses'];
                         $nama_siswa = $_GET['nama'];
