@@ -19,9 +19,9 @@
             </div>
         </div>
         <div class="row justify-content-center mt-3">
-            <div class="col-lg-6">
+            <div class="col-lg-4 mb-5">
                 <!-- Form -->
-                <form method="GET" action="Get-form-nilai.php">
+                <form method="GET" action="Get-form-nilai.php" class="w-100 p-4 rounded-3 shadow-lg border border-dark border-2">
                     <div class="mb-3">
                         <label>Nama</label>
                         <input type="text" class="form-control" name="nama" value="" />
@@ -48,7 +48,7 @@
                         <input type="text" class="form-control" name="nilai_tugas" value="" />
                     </div>
                     <div class="mb-3">
-                        <button type="submit" class="btn btn-primary" name="proses" value="Simpan">Submit</button>
+                        <button type="submit" class="btn btn-primary text-uppercase w-100" name="proses" value="Simpan">Submit</button>
                     </div>
                 </form>
                 <!-- End Form -->
@@ -61,7 +61,7 @@
                     </div>
                 </div>
                 <div class="row justify-content-center mb-4">
-                    <div class="col-8 bg-primary p-2 text-white rounded-3 shadow-md">
+                    <div class="col-8 p-2 rounded-3 shadow-md border border-2 border-primary">
                         <?php
                         $proses = $_GET['proses'];
                         $nama_siswa = $_GET['nama'];
@@ -69,6 +69,44 @@
                         $nilai_uts = $_GET['nilai_uts'];
                         $nilai_uas = $_GET['nilai_uas'];
                         $nilai_tugas = $_GET['nilai_tugas'];
+                        $total_nilai = ($nilai_uts + $nilai_uas + $nilai_tugas) / 3;
+                        $nilai_akhir = (int)$total_nilai;
+
+                        $grade = "";
+                        if ($nilai_akhir >= 85) {
+                            $grade = "A";
+                        } elseif ($nilai_akhir >= 70 && $nilai_akhir < 85) {
+                            $grade = "B";
+                        } elseif ($nilai_akhir >= 56 && $nilai_akhir < 69) {
+                            $grade = "C";
+                        } elseif ($nilai_akhir >= 36 && $nilai_akhir < 55) {
+                            $grade = "D";
+                        } elseif ($nilai_akhir >= 0 && $nilai_akhir < 36) {
+                            $grade = "E";
+                        } else {
+                            $grade = "I";
+                        }
+
+                        $predikat = "";
+                        switch ($grade) {
+                            case 'A':
+                                $predikat = "Sangat Memuaskan";
+                                break;
+                            case 'B':
+                                $predikat = "Memuaskan";
+                                break;
+                            case 'C':
+                                $predikat = "Cukup";
+                                break;
+                            case 'D':
+                                $predikat = "Kurang";
+                                break;
+                            case 'E':
+                                $predikat = "Sangat Kurang";
+                                break;
+                            default:
+                                break;
+                        }
                         if (!empty($proses)) {
                             echo "Proses : {$proses}";
                             echo "<br/>Nama : {$nama_siswa}";

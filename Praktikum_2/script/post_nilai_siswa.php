@@ -69,7 +69,7 @@ switch ($grade) {
             </div>
         </div>
         <div class="row justify-content-center">
-            <div class="col-4 bg-primary p-2 text-white rounded-3 shadow-md">
+            <div class="col-4 p-2 rounded-3 shadow-lg border border-primary border-2">
                 <?php
                 if (!empty($proses)) {
                     echo "Proses : {$proses}";

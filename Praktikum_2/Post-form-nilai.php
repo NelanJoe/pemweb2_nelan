@@ -19,9 +19,9 @@
             </div>
         </div>
         <div class="row justify-content-center mt-3">
-            <div class="col-lg-6">
+            <div class="col-lg-4 mb-5">
                 <!-- Form -->
-                <form method="POST" action="script/post_nilai_siswa.php">
+                <form method="POST" action="script/post_nilai_siswa.php" class="w-100 p-4 rounded-3 shadow-lg border border-dark border-2">
                     <div class="mb-3">
                         <label>Nama</label>
                         <input type="text" class="form-control" name="nama" value="" />
@@ -48,7 +48,7 @@
                         <input type="text" class="form-control" name="nilai_tugas" value="" />
                     </div>
                     <div class="mb-3">
-                        <button type="submit" class="btn btn-primary" name="proses" value="Simpan">Submit</button>
+                        <button type="submit" class="btn btn-primary text-uppercase w-100 " name="proses" value="Simpan">Submit</button>
                     </div>
                 </form>
                 <!-- End Form -->
