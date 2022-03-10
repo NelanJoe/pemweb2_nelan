@@ -73,7 +73,7 @@
                         $nilai_akhir = (int)$total_nilai;
 
                         $grade = "";
-                        if ($nilai_akhir >= 85) {
+                        if ($nilai_akhir >= 85 && $nilai_akhir <= 100) {
                             $grade = "A";
                         } elseif ($nilai_akhir >= 70 && $nilai_akhir < 85) {
                             $grade = "B";
