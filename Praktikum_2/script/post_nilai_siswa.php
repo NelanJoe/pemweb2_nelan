@@ -6,8 +6,11 @@ $nilai_uts = $_POST['nilai_uts'];
 $nilai_uas = $_POST['nilai_uas'];
 $nilai_tugas = $_POST['nilai_tugas'];
 
-$total_nilai = ($nilai_uts + $nilai_uas + $nilai_tugas) / 3;
+$kkm = 55;
+$total_nilai = ($nilai_uts * (30 / 100)) + ($nilai_uas * (35 / 100)) + ($nilai_tugas * (35 / 100));
 $nilai_akhir = (int)$total_nilai;
+
+$kelulusan = $nilai_akhir > $kkm ? "Lulus" : "Tidak Lulus";
 
 $grade = "";
 if ($nilai_akhir >= 85 && $nilai_akhir <= 100) {
@@ -78,6 +81,7 @@ switch ($grade) {
                     echo "<br/>Nilai UTS : {$nilai_uts}";
                     echo "<br/>Nilai UAS : {$nilai_uas}";
                     echo "<br/>Nilai Tugas Praktikum : {$nilai_tugas}";
+                    echo "<br/>Lulus / Tidak Lulus : {$kelulusan}";
                     echo "<br/>Grade : {$grade}";
                     echo "<br/>Predikat : {$predikat}";
                 }
