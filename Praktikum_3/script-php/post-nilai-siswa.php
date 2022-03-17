@@ -52,7 +52,7 @@ $data = array(
             </div>
         </div>
         <div class="row justify-content-center">
-            <div class="col-4 p-2 rounded-3 shadow-lg border border-primary border-2">
+            <div class="col-lg-4 col-10 p-2 rounded-3 shadow-lg border border-primary border-2">
                 <?php
                 if (!empty($proses)) {
                     foreach ($data as $key => $value) {
