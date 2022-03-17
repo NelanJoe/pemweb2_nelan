@@ -14,6 +14,19 @@ $hasil_ujian = kelulusan($total_nilai);
 $grade_hasil = grade($total_nilai);
 $predikat_hasil = predikat($grade_hasil);
 
+
+$data = array(
+    "Proses" => $proses,
+    "Nama" => $nama_siswa,
+    "Mata Kuliah" => $mata_kuliah,
+    "Nilai UTS" => $nilai_uts,
+    "Nilai UAS" => $nilai_uas,
+    "Nilai Tugas Praktikum" => $nilai_tugas,
+    "Grade" => $grade_hasil,
+    "Predikat" => $predikat_hasil,
+    "Dinyatakan" => $hasil_ujian,
+)
+
 ?>
 
 <!DOCTYPE html>
@@ -42,15 +55,9 @@ $predikat_hasil = predikat($grade_hasil);
             <div class="col-4 p-2 rounded-3 shadow-lg border border-primary border-2">
                 <?php
                 if (!empty($proses)) {
-                    echo "Proses : {$proses}";
-                    echo "<br/>Nama : {$nama_siswa}";
-                    echo "<br/>Mata Kuliah : {$mata_kuliah}";
-                    echo "<br/>Nilai UTS : {$nilai_uts}";
-                    echo "<br/>Nilai UAS : {$nilai_uas}";
-                    echo "<br/>Nilai Tugas Praktikum : {$nilai_tugas}";
-                    echo "<br/>Grade : {$grade_hasil}";
-                    echo "<br/>Predikat : {$predikat_hasil}";
-                    echo "<br/>Dinyatakan : {$hasil_ujian}";
+                    foreach ($data as $key => $value) {
+                        echo "{$key} : {$value} <br/>";
+                    }
                 }
                 ?>
             </div>
