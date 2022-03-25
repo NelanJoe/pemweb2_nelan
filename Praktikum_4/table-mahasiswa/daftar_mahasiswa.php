@@ -18,9 +18,10 @@
       crossorigin="anonymous"
     />
     <style>
-      .custom-bg {
-        background: linear-gradient(90deg, rgba(0,151,255,1) 0%, rgba(6,117,159,1) 100%) no-repeat;
-      }
+      body {
+          background: linear-gradient(90deg, rgba(0,151,255,1) 0%, rgba(6,117,159,1) 100%);
+          background-size: cover;
+        }
       
       table {
         border-collapse: collapse;
@@ -32,7 +33,7 @@
 
     <title>Daftar Nama Mahasiswa</title>
   </head>
-  <body class="custom-bg">
+  <body>
     <div class="container mt-5">
       <div class="row text-center">
         <div class="col-12">
