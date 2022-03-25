@@ -28,7 +28,6 @@
         border-radius: 8px;
         overflow: hidden;
       }
-
     </style>
 
     <title>Daftar Nama Mahasiswa</title>
@@ -42,7 +41,7 @@
       </div>
       <div class="row justify-content-center mt-3">
         <div class="col-lg-8 table-responsive">
-          <table class="table table-hover shadow-lg">
+          <table class="table table-hover shadow-md">
             <thead>
               <tr class="table-dark table-active text-white">
                 <td scope="col">No</td>
