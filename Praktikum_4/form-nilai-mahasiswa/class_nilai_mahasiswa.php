@@ -43,3 +43,10 @@ class NilaiMahasiswa
         return $grade;
     }
 }
+
+$nim = $_POST['nim'];
+$nama = $_POST['nama'];
+$pilih_mk = $_POST['pilihmk'];
+$nilai = $_POST['nilai'];
+
+$mahasiswa = new NilaiMahasiswa($nim, $nama, $pilih_mk, $nilai);

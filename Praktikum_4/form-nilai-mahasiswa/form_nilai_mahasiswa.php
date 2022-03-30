@@ -1,8 +1,6 @@
 <?php
   require_once './class_nilai_mahasiswa.php';
 
-  $mahasiswa = new NilaiMahasiswa($_POST['nim'], $_POST['nama'], $_POST['pilihmk'], $_POST['nilai']);
-
   $data_mhs = [
     'NIM' => $mahasiswa->nim,
     'Nama' => $mahasiswa->nama,
