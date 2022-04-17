@@ -8,5 +8,4 @@ class Pasien
     public $tgl_lahir;
     public $email;
     public $gender;
-
 }

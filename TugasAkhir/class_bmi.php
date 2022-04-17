@@ -1,7 +1,7 @@
 <?php
-require_once './class_bmipasien.php';
+require_once "./class_pasien.php";
 
-class BMI extends BmiPasien
+class BMI extends Pasien
 {
     public $berat;
     public $tinggi;
@@ -9,7 +9,6 @@ class BMI extends BmiPasien
     {
         $this->berat = (int)$berat;
         $this->tinggi = (int)$tinggi;
-        
     }
 
     function nilaiBMI()

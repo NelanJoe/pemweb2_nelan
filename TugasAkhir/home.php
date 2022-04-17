@@ -7,9 +7,9 @@ $berat = $_POST['berat'];
 $tinggi = $_POST['tinggi'];
 $umur = $_POST['umur'];
 
-$person1 = new BmiPasien(70, 170, date("y-m-d"));
-$person1->nama = "Buddy";
-$person1->gender = "Pria";
+$person1 = new BmiPasien($berat, $tinggi, date("y-m-d"));
+$person1->nama = $nama;
+$person1->gender = $gender;
 
 $ar_person = [$person1];
 
@@ -103,10 +103,10 @@ print_r($ar_person);
             foreach ($ar_person as $obj) :
             ?>
               <tr class="table-light text-center">
-                
+
                 <td><?= $no ?></td>
                 <td><?= $obj->tanggal ?></td>
-                <td><?= "P".$no ?></td>
+                <td><?= "P" . $no ?></td>
                 <td><?= $obj->nama ?></td>
                 <td><?= $obj->gender ?></td>
                 <td><?= $obj->berat ?></td>
