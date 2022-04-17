@@ -7,16 +7,16 @@ $berat = $_POST['berat'];
 $tinggi = $_POST['tinggi'];
 $umur = $_POST['umur'];
 
-$person1 = new BmiPasien(70, 169, date("y-m-d"));
+$person1 = new BmiPasien(70, 169, date("d-m-Y"));
 $person1->nama = "Ahmad";
 $person1->gender = "L";
-$person2 = new BmiPasien(55, 165, date("y-m-d"));
+$person2 = new BmiPasien(55, 165, date("d-m-Y"));
 $person2->nama = "Lina";
 $person2->gender = "P";
-$person3 = new BmiPasien(45, 165, date("y-m-d"));
+$person3 = new BmiPasien(45, 165, date("d-m-Y"));
 $person3->nama = "Lutfi";
 $person3->gender = "L";
-$person4 = new BmiPasien($berat, $tinggi, date("y-m-d"));
+$person4 = new BmiPasien($berat, $tinggi, date("d-m-Y"));
 $person4->nama = $nama;
 $person4->gender = $gender;
 
