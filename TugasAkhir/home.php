@@ -7,13 +7,22 @@ $berat = $_POST['berat'];
 $tinggi = $_POST['tinggi'];
 $umur = $_POST['umur'];
 
-$person1 = new BmiPasien($berat, $tinggi, date("y-m-d"));
-$person1->nama = $nama;
-$person1->gender = $gender;
+$person1 = new BmiPasien(70, 169, date("y-m-d"));
+$person1->nama = "Ahmad";
+$person1->gender = "L";
+$person2 = new BmiPasien(55, 165, date("y-m-d"));
+$person2->nama = "Lina";
+$person2->gender = "P";
+$person3 = new BmiPasien(45, 165, date("y-m-d"));
+$person3->nama = "Lutfi";
+$person3->gender = "L";
+$person4 = new BmiPasien($berat, $tinggi, date("y-m-d"));
+$person4->nama = $nama;
+$person4->gender = $gender;
 
-$ar_person = [$person1];
+$ar_person = [$person1, $person2, $person3, $person4];
 
-print_r($ar_person);
+// print_r($ar_person);
 
 ?>
 
@@ -48,11 +57,11 @@ print_r($ar_person);
             <p>Gender:</p>
             <div class="form-check">
               <label> Pria </label>
-              <input class="form-check-input" type="radio" name="gender" value="Pria" checked />
+              <input class="form-check-input" type="radio" name="gender" value="L" checked />
             </div>
             <div class="form-check">
               <label> Wanita </label>
-              <input class="form-check-input" type="radio" name="gender" value="Wanita" />
+              <input class="form-check-input" type="radio" name="gender" value="P" />
             </div>
           </div>
           <div class="mb-3">
@@ -106,7 +115,7 @@ print_r($ar_person);
 
                 <td><?= $no ?></td>
                 <td><?= $obj->tanggal ?></td>
-                <td><?= "P" . $no ?></td>
+                <td><?= "P00" . $no ?></td>
                 <td><?= $obj->nama ?></td>
                 <td><?= $obj->gender ?></td>
                 <td><?= $obj->berat ?></td>
