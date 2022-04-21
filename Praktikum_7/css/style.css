@@ -1,0 +1,10 @@
+.jumbotron {
+  background-color: lightblue;
+}
+.jumbotron img {
+  width: 13em;
+  height: 13em;
+  object-fit: cover;
+}
+
+/*# sourceMappingURL=style.css.map */
