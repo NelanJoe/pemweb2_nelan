@@ -5,7 +5,7 @@ class Matakuliah extends CI_Controller
 {
     public function __construct()
     {
-        parent::__construct();
+        Parent::__construct();
         $this->load->helper('url');
     }
 
@@ -29,13 +29,30 @@ class Matakuliah extends CI_Controller
         $matkul3->sks = 4;
         $matkul3->kode = "5005";
 
+        $this->load->model("MataKuliahModel", 'matkul4');
+        $matkul4 = new MataKuliahModel();
+        $matkul4->nama = $this->input->post('matakuliah');
+        $matkul4->sks = $this->input->post('sks');
+        $matkul4->kode = $this->input->post('kode');
+
         $data = array(
             'title' => "Matakuliah",
-            'list_matkul' => [$matkul1, $matkul2, $matkul3],
+            'list_matkul' => [$matkul1, $matkul2, $matkul3, $matkul4],
         );
-        $this->load->view('layout/head', $data);
+
+        $this->load->view('layout/header', $data);
         $this->load->view('layout/navbar');
         $this->load->view('matakuliah/index');
+        $this->load->view('layout/footer');
+    }
+    public function add()
+    {
+        $data = array(
+            'title' => 'Form Matakuliah'
+        );
+        $this->load->view('layout/header', $data);
+        $this->load->view('layout/navbar');
+        $this->load->view('matakuliah/formMatakuliah');
         $this->load->view('layout/footer');
     }
 }

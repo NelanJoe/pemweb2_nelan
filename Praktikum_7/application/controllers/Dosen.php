@@ -5,7 +5,7 @@ class Dosen extends CI_Controller
 {
     public function __construct()
     {
-        parent::__construct();
+        Parent::__construct();
         $this->load->helper('url');
     }
 
@@ -32,14 +32,35 @@ class Dosen extends CI_Controller
         $dsn3->gender = "P";
         $dsn3->pendidikan = "S2";
 
+
+        $this->load->model('DosenModel', 'dsn4');
+        $dsn4 = new DosenModel();
+        $dsn4->nidn = $this->input->post('nidn');
+        $dsn4->nama = $this->input->post('nama');
+        $dsn4->gender = $this->input->post('gender');
+        $dsn4->pendidikan = $this->input->post('pendidikan');
+
+
         $data = array(
             'title' => "Dosen",
-            'list_dosen' => [$dsn1, $dsn2, $dsn3]
+            'list_dosen' => [$dsn1, $dsn2, $dsn3, $dsn4]
         );
 
-        $this->load->view('layout/head', $data);
+        $this->load->view('layout/header', $data);
         $this->load->view('layout/navbar');
         $this->load->view('dosen/index');
+        $this->load->view('layout/footer');
+    }
+
+    public function add()
+    {
+        $data = array(
+            'title' => 'Form Dosen'
+        );
+
+        $this->load->view('layout/header', $data);
+        $this->load->view('layout/navbar');
+        $this->load->view('dosen/formDosen');
         $this->load->view('layout/footer');
     }
 }
