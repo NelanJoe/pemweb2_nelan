@@ -40,10 +40,10 @@ class DosenModel extends CI_Model
     public function update_dosen()
     {
         $data = [
-            'nidn' => $this->input->post('nidn', true),
-            'nama' => $this->input->post('nama', true),
-            'kampus' => $this->input->post('kampus', true),
-            'pendidikan' => $this->input->post('pendidikan', true),
+            'nidn' => $this->input->post('nidn', TRUE),
+            'nama' => $this->input->post('nama', TRUE),
+            'kampus' => $this->input->post('kampus', TRUE),
+            'pendidikan' => $this->input->post('pendidikan', TRUE),
         ];
 
         $this->db->where('id', $this->input->post('id'));
