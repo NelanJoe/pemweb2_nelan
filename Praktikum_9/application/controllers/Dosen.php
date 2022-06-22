@@ -58,7 +58,7 @@ class Dosen extends CI_Controller
             $this->load->view('templates/footer');
         } else {
             $this->DosenModel->addDosen();
-            $this->session->set_flashdata('flash', 'ditambahkan');
+            $this->session->set_flashdata('success_add', 'ditambahkan');
             redirect('dosen/index');
         }
     }
@@ -66,7 +66,7 @@ class Dosen extends CI_Controller
     public function delete($id)
     {
         $this->DosenModel->delete_dosen($id);
-        $this->session->set_flashdata('flash', 'dihapus');
+        $this->session->set_flashdata('success_delete', 'dihapus');
         redirect('dosen');
     }
 
@@ -86,7 +86,7 @@ class Dosen extends CI_Controller
     public function update($id)
     {
         $data = [
-            'title' => 'Tambah Dosen',
+            'title' => 'Edit Dosen',
             'dosen' => $this->DosenModel->getDosenById($id),
         ];
 

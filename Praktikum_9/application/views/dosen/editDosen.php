@@ -5,15 +5,15 @@
                 <input type="hidden" name="id" value="<?= $dosen['id'] ?>">
                 <div class=" mb-3">
                     <label for="nidn" class="form-label">NIDN</label>
-                    <input type="number" class="form-control" name="nidn" id="nidn">
+                    <input type="number" class="form-control" value="<?= $dosen['nidn'] ?>" name="nidn" id="nidn">
                 </div>
                 <div class="mb-3">
                     <label for="nama" class="form-label">Nama Lengkap</label>
-                    <input type="text" class="form-control" name="nama" id="nama">
+                    <input type="text" class="form-control" value="<?= $dosen['nama'] ?>" name="nama" id="nama">
                 </div>
                 <div class="mb-3">
                     <label for="kampus" class="form-label">Nama Kampus</label>
-                    <input type="text" class="form-control" name="kampus" id="kampus">
+                    <input type="text" class="form-control" value="<?= $dosen['kampus'] ?>" name="kampus" id="kampus">
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Pendidikan</label>

@@ -1,8 +1,22 @@
 <div class="container my-4">
-    <?php if ($this->session->flashdata('flash')) : ?>
+    <?php if ($this->session->flashdata('success_add')) : ?>
         <div class="mb-3">
             <div class="alert alert-success" role="alert">
-                Data Dosen <strong>berhasil</strong> <?= $this->session->flashdata('flash'); ?>
+                Data Dosen <strong>berhasil</strong> <?= $this->session->flashdata('success_add'); ?>
+            </div>
+        </div>
+    <?php endif ?>
+    <?php if ($this->session->flashdata('success_delete')) : ?>
+        <div class="mb-3">
+            <div class="alert alert-danger" role="alert">
+                Data Dosen <strong>berhasil</strong> <?= $this->session->flashdata('success_delete'); ?>
+            </div>
+        </div>
+    <?php endif ?>
+    <?php if ($this->session->flashdata('success_update')) : ?>
+        <div class="mb-3">
+            <div class="alert alert-danger" role="alert">
+                Data Dosen <strong>berhasil</strong> <?= $this->session->flashdata('success_update'); ?>
             </div>
         </div>
     <?php endif ?>

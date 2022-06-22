@@ -9,8 +9,10 @@
                 <li class="nav-item">
                     <a class="nav-link <?= $title === 'Home' ? 'active' : ''; ?>" aria-current="page" href="<?= base_url() ?>">Home</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link " aria-current="page" href="<?= base_url() ?>auth/logout">logout</a>
+                </li>
             </ul>
         </div>
     </div>
 </nav>
-

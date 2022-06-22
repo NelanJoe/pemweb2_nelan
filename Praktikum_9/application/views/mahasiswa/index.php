@@ -1,11 +1,30 @@
 <div class="container my-4">
-    <?php if ($this->session->flashdata('flash')) : ?>
-        <div class="mb-3">
-            <div class="alert alert-success" role="alert">
-                Data mahasiswa <strong>berhasil</strong> <?= $this->session->flashdata('flash'); ?>
+    <div class="flash-data" data-flashdata="<?= $this->session->flashdata('success_add') ?>"></div>
+    <?php if ($this->session->flashdata('success_delete')) : ?>
+        <div class=" mb-3">
+            <div class="alert alert-danger" role="alert">
+                Data Mahasiswa <strong>berhasil</strong> <?= $this->session->flashdata('success_delete'); ?>
             </div>
         </div>
     <?php endif ?>
+
+    <?php if ($this->session->flashdata('success_add')) : ?>
+        <div class=" mb-3">
+            <div class="alert alert-success" role="alert">
+                Data Mahasiswa <strong>berhasil</strong> <?= $this->session->flashdata('success_add'); ?>
+            </div>
+        </div>
+    <?php endif ?>
+
+    <?php if ($this->session->flashdata('success_update')) : ?>
+        <div class=" mb-3">
+            <div class="alert alert-primary" role="alert">
+                Data Mahasiswa <strong>berhasil</strong> <?= $this->session->flashdata('success_update'); ?>
+            </div>
+        </div>
+    <?php endif ?>
+
+
     <div class="d-flex align-items-center gap-5">
         <div>
             <h1 class="display-5">Mahasiswa</h1>
@@ -45,7 +64,7 @@
                                 <a href="<?= base_url(); ?>mahasiswa/detail/<?= $item->id; ?>" class="btn btn-sm btn-primary">
                                     <i class=" bi bi-box-arrow-up-right"></i>
                                 </a>
-                                <a href="<?= base_url(); ?>mahasiswa/delete/<?= $item->id; ?>" class="btn btn-sm btn-danger" onclick="return confirm('yakin?');">
+                                <a href="<?= base_url(); ?>mahasiswa/delete/<?= $item->id; ?>" class="btn btn-sm btn-danger">
                                     <i class="bi bi-trash text-light"></i>
                                 </a>
                                 <a href="<?= base_url() ?>mahasiswa/update/<?= $item->id ?>" class="btn btn-sm btn-success">
@@ -61,3 +80,8 @@
         </div>
     </div>
 </div>
+
+<script type="text/javascript">
+    const flashdata = $('.flash-data').data('success_add');
+    console.log(flashdata);
+</script>

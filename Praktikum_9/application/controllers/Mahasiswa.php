@@ -37,7 +37,7 @@ class Mahasiswa extends CI_Controller
             [
                 'field' => 'nim',
                 'label' => 'Nim',
-                'rules' => 'required|numeric|min_length[10]|max_length[11]|is_unique[mahasiswa.nim]',
+                'rules' => 'required|numeric|exact_length[10]|is_unique[mahasiswa.nim]',
             ],
             [
                 'field' => 'nama',
@@ -60,7 +60,7 @@ class Mahasiswa extends CI_Controller
             $this->load->view('templates/footer');
         } else {
             $this->MahasiswaModel->add_mahasiswa();
-            $this->session->set_flashdata('flash', 'ditambahkan');
+            $this->session->set_flashdata('success_add', 'ditambahkan');
             redirect('mahasiswa/index');
         }
     }
@@ -68,7 +68,7 @@ class Mahasiswa extends CI_Controller
     public function delete($id)
     {
         $this->MahasiswaModel->delete_mahasiswa($id);
-        $this->session->set_flashdata('flash', 'dihapus');
+        $this->session->set_flashdata('success_delete', 'dihapus');
         redirect('mahasiswa');
     }
 
@@ -120,7 +120,7 @@ class Mahasiswa extends CI_Controller
             $this->load->view('templates/footer');
         } else {
             $this->MahasiswaModel->update_mahasiswa();
-            $this->session->set_flashdata('flash', 'diubah');
+            $this->session->set_flashdata('success_update', 'diubah');
             redirect('mahasiswa/index');
         }
     }
