@@ -110,12 +110,9 @@ $ar_person = [$person1, $person2, $person3, $person4];
             </tr>
           </thead>
           <tbody>
-            <?php
-            $no = 1;
-            foreach ($ar_person as $obj) :
-            ?>
+            <?php  $no = 1; ?>
+            <?php foreach ($ar_person as $obj) : ?>
               <tr class="table-light text-center">
-
                 <td><?= $no ?></td>
                 <td><?= $obj->tanggal ?></td>
                 <td><?= "P00" . $no ?></td>
@@ -126,10 +123,8 @@ $ar_person = [$person1, $person2, $person3, $person4];
                 <td><?= $obj->nilaiBMI() ?></td>
                 <td><?= $obj->statusBMI() ?></td>
               </tr>
-            <?php
-              $no++;
-            endforeach;
-            ?>
+            <?php  $no++; ?>
+            <?php endforeach; ?>
           </tbody>
         </table>
       </div>
